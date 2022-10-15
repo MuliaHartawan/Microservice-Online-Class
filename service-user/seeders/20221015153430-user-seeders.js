@@ -27,7 +27,7 @@ module.exports = {
       },
       {
         name: 'Deo Lorensa',
-        profession: 'FrontendDeveloper',
+        profession: 'Frontend Developer',
         role : 'student',
         email : 'deo@gmail.com',
         password : await bcrypt.hash('deo', 10),
