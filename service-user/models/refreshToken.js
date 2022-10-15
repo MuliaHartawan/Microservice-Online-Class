@@ -1,13 +1,17 @@
 module.exports = (sequelize, DataTypes) => {
-    const Media = sequelize.define('Media', {
+    const refreshToken = sequelize.define('refreshToken', {
         id : {
             type : DataTypes.INTEGER,
             primaryKey : true,
             autoIncrement : true,
             allowNull : false
         },
-        image : {
-            type : DataTypes.STRING,
+        token : {
+            type : DataTypes.TEXT,
+            allowNull : false
+        },
+        user_id : {
+            type : DataTypes.INTEGER,
             allowNull : false
         },
         createdAt : {
@@ -21,9 +25,9 @@ module.exports = (sequelize, DataTypes) => {
             allowNull : false
         }
     }, {
-        tableName : 'media',
+        tableName : 'refresh_token',
         timestamps : true
     });
 
-    return Media;
+    return refreshToken;
 }
