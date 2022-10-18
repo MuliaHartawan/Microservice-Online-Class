@@ -66,5 +66,5 @@ module.exports = async (req, res) => {
             profession,
             avatar
         }
-    })
+    });
 }
