@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const refreshToken = sequelize.define('refreshToken', {
+    const RefreshTokens = sequelize.define('RefreshTokens', {
         id : {
             type : DataTypes.INTEGER,
             primaryKey : true,
@@ -25,9 +25,9 @@ module.exports = (sequelize, DataTypes) => {
             allowNull : false
         }
     }, {
-        tableName : 'refresh_token',
+        tableName : 'refresh_tokens',
         timestamps : true
     });
 
-    return refreshToken;
+    return RefreshTokens;
 }
