@@ -8,8 +8,9 @@ const api = apiAdapter(URL_SERVICE_USER);
 
 module.exports = async (req, res) => {
     try {
+
         const id = req.user.data.id;
-        const user = await api.get(`/users/${id}`, req.body);
+        const user = await api.post('/users/logout', { user_id : id });
         return res.json(user.data);
     
     } catch (error) {
